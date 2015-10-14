@@ -7,7 +7,7 @@ export default Ember.Mixin.create({
   scrollToken: false,
   scrollTo: inject.service(),
 
-  willRender () {
+  willRender() {
     this._super(...arguments);
 
     let models = this.get('models', models);

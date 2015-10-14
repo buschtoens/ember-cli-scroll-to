@@ -11,7 +11,7 @@ export default Ember.Mixin.create({
     let transition = this._super(...arguments);
 
     transition.then((res) => {
-      if (!("routeName" in res)) {
+      if (!('routeName' in res)) {
         // no real transition, link-to points to same route and models
         this.notifyScrollTo();
       }

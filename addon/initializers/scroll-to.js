@@ -9,5 +9,5 @@ export function initialize(/* application */) {
 
 export default {
   name: 'scroll-to',
-  initialize: initialize
+  initialize
 };
