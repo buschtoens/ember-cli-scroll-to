@@ -1,20 +1,27 @@
 import Ember from 'ember';
 
-const { $, inject, run : { schedule } } = Ember;
+const { $, inject, run : { schedule }, computed } = Ember;
+
+const DEFAULT_DURATION = 700;
+const DEFAULT_PADDING  = 0;
 
 const $viewport = $('html, body');
 
 export default Ember.Service.extend({
-  duration: 700,
-  padding: 0,
+  duration: computed.alias('config.scroll-to.duration'),
+  padding:  computed.alias('config.scroll-to.padding'),
 
   afterTransition: null,
 
   //liquidFireTransitions: inject.service(),
 
   scrollTo(target, duration, padding) {
-    duration = typeof duration === 'number' ? duration : this.get('duration');
-    padding  = typeof padding  === 'number' ? padding  : this.get('padding');
+    if (typeof duration !== 'number') {
+      duration = this.getWithDefault('duration', DEFAULT_DURATION);
+    }
+    if (typeof padding !== 'number') {
+      padding = this.getWithDefault('padding', DEFAULT_PADDING);
+    }
 
     console.log(target, duration, padding);
 

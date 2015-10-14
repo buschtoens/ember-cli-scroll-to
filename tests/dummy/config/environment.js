@@ -19,6 +19,16 @@ module.exports = function(environment) {
     }
   };
 
+  /**
+   * ember-cli-scroll-to
+   *
+   * Example configuration. These values will be used by default.
+   */
+  ENV['scroll-to'] = {
+    duration: 1500,
+    padding: 10
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
