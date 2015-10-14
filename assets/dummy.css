@@ -1,0 +1,144 @@
+/**
+ * Fonts.
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:600,400,300);
+
+
+/**
+ * Reset.
+ */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/**
+ * Base styling.
+ */
+
+html {
+  height: 100%;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  background: radial-gradient(circle farthest-corner at 20% 20%, #0072ff, #185a9d);
+  background-attachment: fixed;
+}
+
+body {
+  min-width: 1200px;
+  padding: 0 2em 0 18em;
+
+  color: #444;
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* + h1, * + h2, * + h3 {
+  padding-top: 20px;
+}
+
+h1, h2, h3 {
+  padding-bottom: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+
+/**
+ * Application navigation.
+ */
+
+.application-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, .6);
+
+  background: linear-gradient(#FFF, #F0F0F0);
+  line-height: 1;
+}
+
+  .application-nav__logo {
+    padding: 1em 1em .5em 1em;
+    margin-bottom: .5em;
+    display: block;
+
+    font-size: 1.5em;
+    font-family: "Montserrat";
+    text-align: center;
+  }
+
+  .application-nav__links {
+    list-style-type: none;
+  }
+
+    .application-nav__links a {
+      height: 100%;
+      padding: 1em;
+      display: block;
+
+      transition: color .2s, background .2s;
+    }
+
+    .application-nav__links a.active {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+
+      background: #0072ff;
+      color: #FFF;
+    }
+
+
+/**
+ * Application outlet.
+ */
+
+.application-outlet {
+  width: 900px;
+  padding: 2em;
+  margin: 2em auto;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+
+  background: #FFF;
+}
+
+
+/**
+ * Helper: spacer.
+ */
+
+.helper-spacer {
+  border: 5px dashed #185a9d;
+
+  color: #888;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 300;
+}
