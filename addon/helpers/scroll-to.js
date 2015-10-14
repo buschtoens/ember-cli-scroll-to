@@ -6,14 +6,16 @@ export function isToken(token) {
   return token && token[TOKEN_SYMBOL];
 }
 
-export function scrollTo(params/*, hash*/) {
-  let token = Object.create(null);
-  token[TOKEN_SYMBOL] = true;
+export default Ember.Helper.extend({
+  globalPadding: 0,
+  compute: function scrollTo(params/*, hash*/) {
+    let token = Object.create(null);
+    token[TOKEN_SYMBOL] = true;
 
-  token.target = params[0];
-  token.duration = params[1];
+    token.target = params[0];
+    token.duration = params[1];
+    token.padding = this.globalPadding;
 
-  return token;
-}
-
-export default Ember.Helper.helper(scrollTo);
+    return token;
+  }
+});
