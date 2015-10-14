@@ -23,8 +23,6 @@ export default Ember.Service.extend({
       padding = this.getWithDefault('padding', DEFAULT_PADDING);
     }
 
-    console.log(target, duration, padding);
-
     let scrollTop;
     if (!target) {
       scrollTop = 0;
