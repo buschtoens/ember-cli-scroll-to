@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-scroll-to/services/scroll-to';
