@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { $, inject, run : { schedule }, computed } = Ember;
+const { $, run : { schedule }, computed } = Ember;
 
 const DEFAULT_DURATION = 700;
 const DEFAULT_PADDING  = 0;
@@ -41,7 +41,7 @@ export default Ember.Service.extend({
       this.set('afterTransition', null);
       schedule('afterRender', () => {
         this.scrollTo(token.target, token.duration, token.padding);
-      })
+      });
     }
   }
 });
