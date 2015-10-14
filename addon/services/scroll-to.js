@@ -27,7 +27,7 @@ export default Ember.Service.extend({
       scrollTop = offset ? offset.top - padding : 0;
     }
 
-    $viewport.animate({ scrollTop }, duration);
+    $viewport.stop(true).animate({ scrollTop }, duration);
   },
 
   didTransition() {
